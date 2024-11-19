@@ -1,6 +1,7 @@
 <?php
 
 use Dragon\Core\Boot;
+use Dragon\Core\Config;
 
 /**
  * Plugin Name: Dragon App
@@ -17,4 +18,5 @@ use Dragon\Core\Boot;
 
 require_once('vendor/autoload.php');
 
+Config::setBaseDir(__DIR__);
 Boot::init();
