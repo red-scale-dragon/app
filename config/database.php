@@ -124,7 +124,7 @@ return [
     |
     */
 
-    'migrations' => 'migrations',
+    'migrations' => 'dragonfw_migrations',
 
     /*
     |--------------------------------------------------------------------------

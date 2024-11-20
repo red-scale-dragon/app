@@ -5,6 +5,10 @@ use Roots\Acorn\ServiceProvider;
 
 use function Roots\env;
 use Dragon\Providers\BladeDirectiveServiceProvider;
+use Dragon\Providers\ShortcodeServiceProvider;
+use Dragon\Core\Config;
+use Dragon\Providers\TaxonomyServiceProvider;
+use Dragon\Providers\PostTypeServiceProvider;
 
 return [
 
@@ -19,7 +23,20 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Dragon App'),
+	'name' => env('APP_NAME', 'Dragon App'),
+	
+	/*
+	 |--------------------------------------------------------------------------
+	 | Namespace
+	 |--------------------------------------------------------------------------
+	 |
+	 | Options in the DB, shortcodes, and many more things use namespaces to
+	 | keep your code from affecting other plugins installed on the same site.
+	 | Set a custom namespace here for your app.
+	 |
+	 */
+	
+	'namespace' => env('APP_NAMESPACE', 'dragonfw_' . Config::getPluginDirName() . '_'),
 
     /*
     |--------------------------------------------------------------------------
@@ -160,6 +177,9 @@ return [
 
     'providers' => ServiceProvider::defaultProviders()->merge([
         BladeDirectiveServiceProvider::class,
+    	ShortcodeServiceProvider::class,
+    	TaxonomyServiceProvider::class,
+    	PostTypeServiceProvider::class,
     ])->toArray(),
 
     /*

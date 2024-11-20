@@ -18,5 +18,5 @@ use Dragon\Core\Config;
 
 require_once('vendor/autoload.php');
 
-Config::setBaseDir(__DIR__);
+Config::setPluginLoaderFile(__FILE__);
 Boot::init();
