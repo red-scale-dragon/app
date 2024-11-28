@@ -7,7 +7,7 @@
 	"keywords": ["framework", "dragon", "WordPress", "Plugin"],
 	"require" : {
 		"php": "^8.1",
-		"red-scale-dragon/framework": "^2.0"
+		"red-scale-dragon/framework": "dev-main"
 	},
 	"require-dev" : {
 		"spatie/laravel-ignition": "^2.8",

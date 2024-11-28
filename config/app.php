@@ -4,11 +4,17 @@ use Illuminate\Support\Facades\Facade;
 use Roots\Acorn\ServiceProvider;
 
 use function Roots\env;
+use App\Providers\AssetsServiceProvider;
 use Dragon\Providers\BladeDirectiveServiceProvider;
 use Dragon\Providers\ShortcodeServiceProvider;
 use Dragon\Core\Config;
 use Dragon\Providers\TaxonomyServiceProvider;
 use Dragon\Providers\PostTypeServiceProvider;
+use App\Providers\AppServiceProvider;
+use Dragon\Providers\FormRequestServiceProvider;
+use Dragon\Providers\RoleServiceProvider;
+use Dragon\Providers\AjaxServiceProvider;
+use Dragon\Providers\CronServiceProvider;
 
 return [
 
@@ -36,7 +42,7 @@ return [
 	 |
 	 */
 	
-	'namespace' => env('APP_NAMESPACE', 'dragonfw_' . Config::getPluginDirName() . '_'),
+	'namespace' => env('APP_NAMESPACE', 'dragonfw_' . Config::getPluginDirName()),
 
     /*
     |--------------------------------------------------------------------------
@@ -176,10 +182,16 @@ return [
     */
 
     'providers' => ServiceProvider::defaultProviders()->merge([
+    	AppServiceProvider::class,
         BladeDirectiveServiceProvider::class,
     	ShortcodeServiceProvider::class,
     	TaxonomyServiceProvider::class,
     	PostTypeServiceProvider::class,
+    	AssetsServiceProvider::class,
+    	FormRequestServiceProvider::class,
+    	RoleServiceProvider::class,
+    	AjaxServiceProvider::class,
+    	CronServiceProvider::class,
     ])->toArray(),
 
     /*
