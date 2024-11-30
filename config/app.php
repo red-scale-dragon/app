@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Facade;
 use Roots\Acorn\ServiceProvider;
 
 use function Roots\env;
-use App\Providers\AssetsServiceProvider;
+use Dragon\Providers\AssetsServiceProvider;
 use Dragon\Providers\BladeDirectiveServiceProvider;
 use Dragon\Providers\ShortcodeServiceProvider;
 use Dragon\Core\Config;

@@ -2,16 +2,18 @@
 
 namespace Tests;
 
-use Dragon\DB;
+use Dragon\Database\Migrate;
 
 class TestCase extends \WP_UnitTestCase {
 	public function setUp() : void {
-		$db = DB::make();
-		$db->migrate();
+		Migrate::up();
 	}
 	
 	public function tearDown() : void {
-		$db = DB::make();
-		$db->rollback();
+		Migrate::removeDatabaseTables();
+	}
+	
+	protected function checkRequirements() {
+		// Shhhhh... Stop the useless warnings.
 	}
 }

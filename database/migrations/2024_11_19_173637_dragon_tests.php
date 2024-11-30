@@ -10,7 +10,7 @@ return new class extends Migration {
      */
     public function up(): void
     {
-    	Schema::create('dragon_test', function (Blueprint $table) {
+    	Schema::create('dragon_tests', function (Blueprint $table) {
     		$table->id();
     		$table->string('name');
     		$table->string('color');
@@ -23,6 +23,6 @@ return new class extends Migration {
      */
     public function down(): void
     {
-    	Schema::drop('dragon_test');
+    	Schema::drop('dragon_tests');
     }
 };

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use Dragon\Http\Controllers\Admin\SettingsController as DragonSettingsController;
+use App\Http\Requests\Admin\AdminSettingsRequest;
+use Illuminate\Http\Request;
 
 class SettingsController extends DragonSettingsController {
 	protected static string $pageTitle = "Admin Settings";
@@ -14,9 +16,13 @@ class SettingsController extends DragonSettingsController {
 	protected array $encryptedFields = [
 		//
 	];
+	
+	public function store(AdminSettingsRequest $request) {
+		return $this->save($request);
+	}
     
-    protected function getFields() {
-    	return array_merge(parent::getFields(), [
+	protected function getFields(Request $request) {
+    	return array_merge(parent::getFields($request), [
     		//
     	]);
     }

@@ -1,5 +1,7 @@
 <?php
 
+use Dragon\Core\Config;
+
 return [
 
     /*
@@ -15,8 +17,9 @@ return [
 
     'paths' => [
         get_theme_file_path('/resources/views'),
-        get_parent_theme_file_path('/resources/views'),
-        resource_path('views'),
+    	get_parent_theme_file_path('/resources/views'),
+    	resource_path('views'),
+    	Config::dragonResourcesDir('views'),
     ],
 
     /*

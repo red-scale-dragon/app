@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\Admin\SettingsController;
 use App\Http\Controllers\Admin\AdminLogController;
+use App\Http\Controllers\Admin\Table\DragonDataTable;
+use App\Http\Controllers\Admin\Table\DragonDataDetails;
 
 return [
 	/*
@@ -24,9 +26,10 @@ return [
 		SettingsController::class,
 	],
 	'submenu' => [
+		DragonDataTable::class,
 		AdminLogController::class,
 	],
 	'hidden_menu' => [
-		
+		DragonDataDetails::class,
 	],
 ];

@@ -1,28 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<phpunit backupGlobals="true"
-         backupStaticProperties="true"
-         bootstrap="tests/bootstrap.php"
+<phpunit backupGlobals="false"
+         backupStaticProperties="false"
+         bootstrap="../bootstrap.php"
          colors="true"
-         processIsolation="true"
-         cacheDirectory=".phpunit.cache">
+         processIsolation="false"
+         cacheDirectory=".phpunit.cache"
+         stopOnFailure="false">
 	<testsuites>
         <testsuite name="Unit">
-            <directory>tests/Unit</directory>
+            <directory>../Unit</directory>
         </testsuite>
         <testsuite name="Feature">
-            <directory>tests/Feature</directory>
+            <directory>../Feature</directory>
         </testsuite>
 		<testsuite name="Framework">
-			<directory>./vendor/red-scale-dragon/framework/tests</directory>
+			<directory>../../vendor/red-scale-dragon/framework/tests</directory>
 		</testsuite>
     </testsuites>
     <source>
         <include>
-            <directory>./app</directory>
-            <directory>./vendor/red-scale-dragon/framework</directory>
+            <directory>app</directory>
         </include>
     </source>
     <php>
+		<const name="WP_TESTS_MULTISITE" value="1" />
         <ini name="date.timezone" value="UTC" />
         <ini name="intl.default_locale" value="C.UTF-8" />
         <ini name="memory_limit" value="2048M" />

@@ -38,4 +38,48 @@ return [
             'bundles' => get_theme_file_path('public/entrypoints.json'),
         ],
     ],
+	
+    /*
+     |--------------------------------------------------------------------------
+     | Assets for All Pages
+     |--------------------------------------------------------------------------
+     |
+     | An alternative to the above is to set your assets for the "admin" area,
+     | "frontend", or "global" (both) in the arrays below. If you prefer
+     | page-specific assets, you'll instead want to configure those in the
+     | controller for the page/shortcode.
+     |
+     */
+	'admin' => [
+		'css' => [
+			'app' => [
+				'style' => 'global/admin.css',
+			],
+		],
+		'js' => [
+			//
+		],
+	],
+	'frontend' => [
+		'enable_ajax' => true,
+		'css' => [
+			'app' => [
+				'style' => 'global/frontend.css',
+			],
+		],
+		'js' => [
+			'app' => [
+				'script' => 'global/app.js',
+				'dependencies' => ['jquery'],
+			],
+		],
+	],
+	'global' => [
+		'css' => [
+			//
+		],
+		'js' => [
+			//
+		],
+	],
 ];
