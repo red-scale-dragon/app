@@ -1,7 +1,7 @@
 # Dragon App
 The Dragon Framework is exclusively for clean coders who love Laravel and want to build WordPress Plugins using Laravel components.
 
-![Support Level][support-level-image] ![PHP 7.4+][php-image] [![MIT License][license-image]][license-url] [![Dragon Framework][circleci-image]][circleci-url]
+![Support Level][support-level-image] ![PHP 7.4+][php-image] [![MIT License][license-image]][license-url] [![CircleCI][circleci-image]][circleci-url]
 
 ## Usage
 
@@ -11,5 +11,5 @@ Our [quick start guide](https://dragon-framework-docs.readthedocs.io/en/latest/q
 [php-image]: https://img.shields.io/badge/php-8.1%2B-green.svg
 [license-image]: https://img.shields.io/badge/License-MIT-blue.svg
 [license-url]: https://github.com/red-scale-dragon/app/blob/main/LICENSE
-[circleci-image]: https://circleci.com/gh/red-scale-dragon/app.svg?style=shield
-[circleci-url]: https://circleci.com/gh/red-scale-dragon/app
+[circleci-image]: https://dl.circleci.com/status-badge/img/circleci/6h7a9jeaexCsPtfh9E9gvT/Q9sMKQn7AQLQemJZosTHjJ/tree/main.svg?style=shield
+[circleci-url]: https://dl.circleci.com/status-badge/redirect/circleci/6h7a9jeaexCsPtfh9E9gvT/Q9sMKQn7AQLQemJZosTHjJ/tree/main
