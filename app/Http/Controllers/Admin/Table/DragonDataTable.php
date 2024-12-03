@@ -26,6 +26,10 @@ class DragonDataTable extends Table {
 		'created_at'	=> 'Creation Date',
 	];
 	
+	protected function deleteRow(int $id) {
+		DragonTest::where('id', $id)->delete();
+	}
+	
 	protected function getRows() {
 		return DragonTest::orderBy('created_at', 'DESC')->get();
 	}

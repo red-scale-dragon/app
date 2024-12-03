@@ -15,6 +15,7 @@ class DragonDataDetails extends Details {
 	protected static string $routeName = "admin-dragon-details";
 	protected static string $slug = "admin-dragon-details";
 	protected static string $parentSlug = "admin-dragons";
+	protected static bool $readOnly = false;
 	
 	protected string $modelName = DragonTest::class;
 	
@@ -29,13 +30,13 @@ class DragonDataDetails extends Details {
 	protected function getFields(Request $request) {
 		return [
 			Textbox::make('name')
-				->value($this->getValue($request->query->get('id'), 'name'))
-				->label('What\'s the dragon\'s name?')
-				->required(),
+			->value($this->getValue($request->get('id'), 'name'))
+			->label('What\'s the dragon\'s name?')
+			->required(),
 			Textbox::make('color')
-				->value($this->getValue($request->query->get('id'), 'color'))
-				->label('What color is the dragon?')
-				->required(),
+			->value($this->getValue($request->get('id'), 'color'))
+			->label('What color is the dragon?')
+			->required(),
 		];
 	}
 }

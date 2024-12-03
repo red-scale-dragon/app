@@ -37,6 +37,7 @@ Route::middleware(['web'])->prefix(Config::prefix())->group(function () {
 	
 	Route::controller(DragonDataTable::class)->name('admin-dragons')->group(function () {
 		Route::get('admin-dragons', 'show');
+		Route::delete('admin-dragons', 'delete');
 	});
 	
 	Route::controller(DragonDataDetails::class)->name('admin-dragon-details')->group(function () {

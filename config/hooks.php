@@ -2,9 +2,7 @@
 
 use App\UserProfile;
 use App\Http\Ajax\DragonAjax;
-use App\Widgets\HelloWorldWidget;
 use App\Exceptions\Handler;
-use App\Http\Controllers\Api\NamesController;
 
 return [
 	'admin' => [
