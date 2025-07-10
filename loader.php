@@ -11,7 +11,7 @@ use Dragon\Core\Config;
  * Text Domain: dragon-app
  * Version: 1.0.0
  * Requires at least: 5.4
- * Requires PHP: 8.1
+ * Requires PHP: 8.3
  * Tested up to: 6.7
  * License: MIT
  */

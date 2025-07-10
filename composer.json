@@ -6,7 +6,7 @@
 	"license" : "MIT",
 	"keywords": ["framework", "dragon", "WordPress", "Plugin"],
 	"require" : {
-		"php": "^8.1",
+		"php": "^8.3",
 		"red-scale-dragon/framework": "^2.0"
 	},
 	"require-dev" : {

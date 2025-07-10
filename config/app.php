@@ -15,6 +15,7 @@ use Dragon\Providers\FormRequestServiceProvider;
 use Dragon\Providers\RoleServiceProvider;
 use Dragon\Providers\AjaxServiceProvider;
 use Dragon\Providers\CronServiceProvider;
+use Dragon\Providers\MailServiceProvider;
 
 return [
 
@@ -192,6 +193,7 @@ return [
     	RoleServiceProvider::class,
     	AjaxServiceProvider::class,
     	CronServiceProvider::class,
+    	MailServiceProvider::class,
     ])->toArray(),
 
     /*

@@ -3,7 +3,7 @@ The Dragon Framework is exclusively for clean coders who love Laravel and want t
 
 This is the app containing sample code. If you're looking for a starting point without sample code, check out the [blank app](https://github.com/red-scale-dragon/blank-app).
 
-![Support Level][support-level-image] ![PHP 7.4+][php-image] [![MIT License][license-image]][license-url] [![CircleCI][circleci-image]][circleci-url]
+![Support Level][support-level-image] ![PHP 8.3+][php-image] [![MIT License][license-image]][license-url] [![CircleCI][circleci-image]][circleci-url]
 
 ## Usage
 
