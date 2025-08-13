@@ -36,6 +36,7 @@ return [
     'mailers' => [
     	'wp_mail' => [
     		'transport' => 'wp_mail',
+    		'attachments_path' => storage_path('email_tmp'),
     	],
     	
         'smtp' => [

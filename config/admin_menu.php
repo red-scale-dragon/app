@@ -4,6 +4,8 @@ use App\Http\Controllers\Admin\SettingsController;
 use App\Http\Controllers\Admin\AdminLogController;
 use App\Http\Controllers\Admin\Table\DragonDataTable;
 use App\Http\Controllers\Admin\Table\DragonDataDetails;
+use Dragon\Http\Controllers\Admin\Table\ConfigurationEditorTable;
+use Dragon\Http\Controllers\Admin\Table\ConfigurationFileDetails;
 
 return [
 	/*
@@ -27,9 +29,11 @@ return [
 	],
 	'submenu' => [
 		DragonDataTable::class,
+		ConfigurationEditorTable::class,
 		AdminLogController::class,
 	],
 	'hidden_menu' => [
 		DragonDataDetails::class,
+		ConfigurationFileDetails::class,
 	],
 ];

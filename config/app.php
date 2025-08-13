@@ -97,7 +97,7 @@ return [
     |
     */
 
-    'timezone' => get_option('timezone_string') ?: 'UTC',
+	'timezone' => env('TZ') ?: 'UTC',
 
     /*
     |--------------------------------------------------------------------------
