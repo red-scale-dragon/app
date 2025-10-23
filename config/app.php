@@ -11,6 +11,7 @@ use Dragon\Core\Config;
 use Dragon\Providers\TaxonomyServiceProvider;
 use Dragon\Providers\PostTypeServiceProvider;
 use App\Providers\AppServiceProvider;
+use App\Providers\EventServiceProvider;
 use Dragon\Providers\FormRequestServiceProvider;
 use Dragon\Providers\RoleServiceProvider;
 use Dragon\Providers\AjaxServiceProvider;
@@ -184,6 +185,7 @@ return [
 
     'providers' => ServiceProvider::defaultProviders()->merge([
     	AppServiceProvider::class,
+    	EventServiceProvider::class,
         BladeDirectiveServiceProvider::class,
     	ShortcodeServiceProvider::class,
     	TaxonomyServiceProvider::class,
